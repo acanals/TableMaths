@@ -100,16 +100,17 @@
   TableMaths.version = '1.0';
   $tm = new TableMaths;
   $tm.report();
-  /*
-    run : function(){
-      
-      
-      this.cache = [];
-      i=0;
-      err=0;
-      warn=0;
-      report=''
-      
+
+
+  run : function(){
+
+
+    this.cache = [];
+    i=0;
+    err=0;
+    warn=0;
+    report=''
+
       $('table,td').each(function(idx,el){
         var e=$(el);
         var x=e.attr('width');
@@ -142,15 +143,14 @@
         var e=$(el);
         if(e.attr('valign')){
           report += 'Warning! valign on tr tags is ignored in some email clients.<br/>'
-          report += $tablemaths.tagHtml(e)+'<br/>';
-          warn++;
+        report += $tablemaths.tagHtml(e)+'<br/>';
+      warn++;
         }
         var tds = e.find('> td');
         var pad_top = tds.map(function(){return parseInt($(this).css('padding-top'), 10);});
         i++;
       });
       report = '<b>'+i+' tags scanned, '+err+' errors, '+warn+' warnings.</b><br/><br/>'+report+'Enjoy your maths!';
-      
-    },
-  */
+
+  },
 }).call(this);
